@@ -14,19 +14,9 @@ S(32) , where S is the result written in 2’s complement format, depending on t
 
 The input vectors have been generated using a python script created ad-hoc by me, and since most of the sequences have the same result, I shuffled them to increase the switching activity on the output register.
 
-<style>
-p .around {
- padding: 1em;
- float: left;
-}
-p {
- clear:both;
-}
-</style>
-<p>
-<img class="around" src="./img/002.png"><div>
+<div>
 My IP has this structure, having the Clock Enable (CE) signal active till the last computation and the System Clear signal (SCLR) substituted by a synchronous reset in the testbench. 
-I also added a constraints file for the Clock signal to get valid timing and power summaries in the implementation. </div>
+I also added a constraints file for the Clock signal to get valid timing and power summaries in the implementation. </div><img class="around" src="./img/002.png">
 </p>
 <p>
 My testbench requires VHDL-2008 (this has already been handled in the tcl script) and it is based on 4 processes: 
